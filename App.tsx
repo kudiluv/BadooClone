@@ -1,19 +1,11 @@
 import React from 'react';
-import {SafeAreaView, Text, useColorScheme} from 'react-native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
-import {Colors} from 'react-native/Libraries/NewAppScreen';
+const Stack = createNativeStackNavigator();
 
 const App = () => {
-  const isDarkMode = useColorScheme() === 'dark';
-
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
-
   return (
-    <SafeAreaView style={backgroundStyle}>
-      <Text>Hello world!</Text>
-    </SafeAreaView>
+    <></>
   );
 };
 
