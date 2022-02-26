@@ -1,12 +1,8 @@
 import React from 'react';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
-
-const Stack = createNativeStackNavigator();
+import RootNavigator from './src/routes/RootNavigator';
 
 const App = () => {
-  return (
-    <></>
-  );
+  return <RootNavigator />;
 };
 
 export default App;
