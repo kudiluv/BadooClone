@@ -52,11 +52,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   firstColumn: {
-    marginLeft: 10,
     marginRight: 10,
   },
   lastFirstColumn: {
-    marginLeft: 10,
     marginRight: 10,
     transform: [{translateX: -width / 2}],
   },

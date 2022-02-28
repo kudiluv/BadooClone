@@ -50,12 +50,15 @@ const styles = StyleSheet.create({
     height: 242,
     borderRadius: 11,
     overflow: 'hidden',
-    borderColor: '#CCCCCC',
-    borderWidth: 1,
   },
   buttonsContainer: {
     flexDirection: 'row',
     height: '20%',
+    borderColor: '#CCCCCC',
+    borderWidth: 0.8,
+    borderTopWidth: 0,
+    borderBottomStartRadius: 11,
+    borderBottomEndRadius: 11,
   },
   image: {
     width: '100%',
