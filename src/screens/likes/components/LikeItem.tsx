@@ -6,7 +6,7 @@ import {
   ViewStyle,
 } from 'react-native';
 import React from 'react';
-import Heart from '../../../static/Heart.svg';
+import Heart from '../../../components/icons/Heart';
 import Close from '../../../static/Close.svg';
 
 type PropsType = {
