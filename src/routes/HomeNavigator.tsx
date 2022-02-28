@@ -5,8 +5,10 @@ import ChatsScreen from '../screens/chats/ChatsScreen';
 import SearchScreen from '../screens/search/SearchScreen';
 import LikesScreen from '../screens/likes/LikesScreen';
 import {TouchableNativeFeedback, View} from 'react-native';
-import ChatBottom from './components/ChatBottom';
-import HeartBottom from './components/HeartBottom';
+import ChatBottom from './components/icons/ChatBottom';
+import HeartBottom from './components/icons/HeartBottom';
+import SearchBottom from './components/icons/SearchBottom';
+import ProfileBottom from './components/icons/ProfileBottom';
 
 const Tab = createBottomTabNavigator();
 
@@ -25,8 +27,22 @@ const HomeNavigator = () => {
           </TouchableNativeFeedback>
         ),
       }}>
-      <Tab.Screen name="Search" component={SearchScreen} />
-      <Tab.Screen name="Profile" component={ProfileScreen} />
+      <Tab.Screen
+        name="Search"
+        component={SearchScreen}
+        options={{
+          headerShown: false,
+          tabBarIcon: ({color}) => <SearchBottom fill={color} />,
+        }}
+      />
+      <Tab.Screen
+        name="Profile"
+        component={ProfileScreen}
+        options={{
+          headerShown: false,
+          tabBarIcon: ({color}) => <ProfileBottom fill={color} />,
+        }}
+      />
       <Tab.Screen
         name="Chats"
         component={ChatsScreen}
