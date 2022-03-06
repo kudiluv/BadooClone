@@ -4,12 +4,16 @@ import ProfileScreen from '../screens/profile/ProfileScreen';
 import ChatsScreen from '../screens/chats/ChatsScreen';
 import SearchScreen from '../screens/search/SearchScreen';
 import LikesScreen from '../screens/likes/LikesScreen';
-import {Platform, StyleSheet, TouchableNativeFeedback, View} from 'react-native';
+import {
+  Platform,
+  StyleSheet,
+  TouchableNativeFeedback,
+  View,
+} from 'react-native';
 import ChatBottom from './components/icons/ChatBottom';
 import HeartBottom from './components/icons/HeartBottom';
 import SearchBottom from './components/icons/SearchBottom';
 import ProfileBottom from './components/icons/ProfileBottom';
-import SearchHeader from '../screens/search/SearchHeader';
 
 const Tab = createBottomTabNavigator();
 
@@ -32,7 +36,7 @@ const HomeNavigator = () => {
         name="Search"
         component={SearchScreen}
         options={{
-          header: () => <SearchHeader />,
+          headerShown: false,
           tabBarIcon: ({color}) => <SearchBottom fill={color} />,
           tabBarStyle: styles.hiddenBorderStyle,
         }}
