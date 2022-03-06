@@ -1,14 +1,28 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, View} from 'react-native';
 import React from 'react';
+import Card from './components/card/Card';
+import {gestureHandlerRootHOC} from 'react-native-gesture-handler';
+import SearchHeader from './SearchHeader';
 
 const SearchScreen = () => {
   return (
-    <View>
-      <Text>SearchScreen</Text>
-    </View>
+    <>
+      <SearchHeader />
+      <View style={styles.container}>
+        <Card />
+      </View>
+    </>
   );
 };
+export default gestureHandlerRootHOC(SearchScreen);
 
-export default SearchScreen;
-
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: 'white',
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingTop: 10,
+    zIndex: 1,
+  },
+});
